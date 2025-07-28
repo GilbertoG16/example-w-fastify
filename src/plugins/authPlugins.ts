@@ -20,7 +20,6 @@ const authPlugin: FastifyPluginAsync = async (fastify) => {
 
     console.log("Token generado para pruebas:", token);
 
-
     fastify.decorate('authenticate', async function (request: FastifyRequest, reply: FastifyReply) {
         try {
             const authHeader = request.headers['authorization'];
